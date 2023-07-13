@@ -1,7 +1,8 @@
 
 import Logo from './img/logo.svg';
 
-export function loadMainPage(innerPage) {
+export function loadMainPage() {
+  const innerPage = document.querySelector('.inner-page');
   const leftContainer = document.createElement('div');
   const redText = document.createElement('div');
   const logoFirstLineText = document.createElement('h1');
@@ -47,7 +48,5 @@ export function loadMainPage(innerPage) {
   rightContainer.appendChild(text3);
   rightContainer.appendChild(slogan); 
   innerPage.appendChild(rightContainer);
-
-
 
 }

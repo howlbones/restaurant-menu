@@ -42,5 +42,4 @@ export function pageLoad() {
   page.appendChild(navigationContainer);
   page.appendChild(innerPage);
 
-  loadMainPage(innerPage);
 }
