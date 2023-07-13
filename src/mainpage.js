@@ -14,6 +14,8 @@ export function loadMainPage() {
   symbols.classList.add('symbols');
   redText.id = 'logo-red-text';
 
+  innerPage.classList.add('home');
+
   logoFirstLineText.innerText = 'NEW ERA';
   symbols.innerText = '時代';
   logoSecondLineText.innerText = 'RESTAURANT';

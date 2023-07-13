@@ -11,7 +11,6 @@
 #content  {
   background-color: rgb(10, 11, 19);
   color: rgb(226, 216, 216);
-  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -38,18 +37,20 @@ nav a:hover {
   font-size: 1.8rem;
   line-height: 0px;
   margin-top: 10px;
+  transition: 0.5s;
 }
 
-.inner-page {
+.inner-page.home {
   display: grid;
   grid-template-columns: 350px 600px;
   margin-left: 25vw;
   margin-top: 100px;
   margin-right: 25vw;
+  margin-bottom: 200px;
 }
 
 @media only screen and (max-width: 1400px) {
-  .inner-page {
+  .inner-page.home {
     margin-left: 40px;
     margin-right: 40px;
   }
@@ -101,3 +102,62 @@ img {
   font-style: italic;
   margin-top:  60px;
 }
+
+
+/* Menu styles */
+
+.inner-page.menu {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 130px;
+}
+
+
+.inner-page.menu .item {
+  display: grid;
+  grid-template-columns: auto auto;
+  font-size: 1rem;
+  gap: 15px;
+  row-gap: 40px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .inner-page.menu {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+.inner-page.menu .item div p:nth-child(1) {
+  color: rgb(207, 104, 104);
+  font-size: 1.3rem;
+}
+
+.inner-page.menu .item div p:nth-child(2) {
+  letter-spacing: 1px;
+}
+
+.inner-page.menu .item div p:nth-child(3) {
+  font-style: italic;
+  font-size: 1.3rem;
+  align-self: end;
+}
+
+.inner-page.menu .item img {
+  margin: 0px;
+  filter: none;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.inner-page.menu .item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
