@@ -2,6 +2,7 @@ import { pageLoad } from './pageload';
 import { clearPage } from './clearpage';
 import { loadMainPage } from './mainpage';
 import { loadMenu } from './loadmenu';
+import { loadAbout } from './loadabout';
 import './main.css';
 
 pageLoad();
@@ -14,6 +15,8 @@ links[0].nextElementSibling.style.color = 'rgb(207, 104, 104)';
 links.forEach(item => item.addEventListener('click', switchPage));
 
 function switchPage(e) {
+
+
   links.forEach(function (item) {
     const temp = item.nextElementSibling;
     temp.style.color = 'rgb(10, 11, 19)';
@@ -27,6 +30,9 @@ function switchPage(e) {
     loadMainPage();
   } else if (e.target.innerText === 'MENU') {
     loadMenu();
+  } else if (e.target.innerText === 'ABOUT') {
+    loadAbout();
   }
 }
+
 
